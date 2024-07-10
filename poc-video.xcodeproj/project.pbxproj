@@ -10,12 +10,13 @@
 		E487625D2C3EA0D100E1B221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487625C2C3EA0D100E1B221 /* AppDelegate.swift */; };
 		E487625F2C3EA0D200E1B221 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487625E2C3EA0D200E1B221 /* SceneDelegate.swift */; };
 		E48762612C3EA0D200E1B221 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48762602C3EA0D200E1B221 /* ViewController.swift */; };
-		E48762642C3EA0D200E1B221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48762622C3EA0D200E1B221 /* Main.storyboard */; };
 		E48762662C3EA0E000E1B221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48762652C3EA0E000E1B221 /* Assets.xcassets */; };
 		E48762692C3EA0E000E1B221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E48762672C3EA0E000E1B221 /* LaunchScreen.storyboard */; };
 		E48762742C3EA0E000E1B221 /* poc_videoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48762732C3EA0E000E1B221 /* poc_videoTests.swift */; };
 		E487627E2C3EA0E000E1B221 /* poc_videoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487627D2C3EA0E000E1B221 /* poc_videoUITests.swift */; };
 		E48762802C3EA0E000E1B221 /* poc_videoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487627F2C3EA0E000E1B221 /* poc_videoUITestsLaunchTests.swift */; };
+		E487628D2C3EA20800E1B221 /* VideoCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E487628C2C3EA20800E1B221 /* VideoCompressor.swift */; };
+		E48762912C3EA7DC00E1B221 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E48762902C3EA7DC00E1B221 /* video.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		E487625C2C3EA0D100E1B221 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E487625E2C3EA0D200E1B221 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E48762602C3EA0D200E1B221 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E48762632C3EA0D200E1B221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E48762652C3EA0E000E1B221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E48762682C3EA0E000E1B221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E487626A2C3EA0E000E1B221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		E48762792C3EA0E000E1B221 /* poc-videoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "poc-videoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E487627D2C3EA0E000E1B221 /* poc_videoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_videoUITests.swift; sourceTree = "<group>"; };
 		E487627F2C3EA0E000E1B221 /* poc_videoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_videoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E487628C2C3EA20800E1B221 /* VideoCompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCompressor.swift; sourceTree = "<group>"; };
+		E48762902C3EA7DC00E1B221 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = video.mp4; path = ../../../Downloads/video.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,14 @@
 		E487625B2C3EA0D100E1B221 /* poc-video */ = {
 			isa = PBXGroup;
 			children = (
+				E48762902C3EA7DC00E1B221 /* video.mp4 */,
 				E487625C2C3EA0D100E1B221 /* AppDelegate.swift */,
 				E487625E2C3EA0D200E1B221 /* SceneDelegate.swift */,
 				E48762602C3EA0D200E1B221 /* ViewController.swift */,
-				E48762622C3EA0D200E1B221 /* Main.storyboard */,
 				E48762652C3EA0E000E1B221 /* Assets.xcassets */,
 				E48762672C3EA0E000E1B221 /* LaunchScreen.storyboard */,
 				E487626A2C3EA0E000E1B221 /* Info.plist */,
+				E487628C2C3EA20800E1B221 /* VideoCompressor.swift */,
 			);
 			path = "poc-video";
 			sourceTree = "<group>";
@@ -232,8 +235,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E48762692C3EA0E000E1B221 /* LaunchScreen.storyboard in Resources */,
+				E48762912C3EA7DC00E1B221 /* video.mp4 in Resources */,
 				E48762662C3EA0E000E1B221 /* Assets.xcassets in Resources */,
-				E48762642C3EA0D200E1B221 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E487628D2C3EA20800E1B221 /* VideoCompressor.swift in Sources */,
 				E48762612C3EA0D200E1B221 /* ViewController.swift in Sources */,
 				E487625D2C3EA0D100E1B221 /* AppDelegate.swift in Sources */,
 				E487625F2C3EA0D200E1B221 /* SceneDelegate.swift in Sources */,
@@ -297,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E48762622C3EA0D200E1B221 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E48762632C3EA0D200E1B221 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E48762672C3EA0E000E1B221 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +442,7 @@
 				INFOPLIST_FILE = "poc-video/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,7 +469,7 @@
 				INFOPLIST_FILE = "poc-video/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
